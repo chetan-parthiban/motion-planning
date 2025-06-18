@@ -345,8 +345,8 @@ class UltraTask(ManipulationEnv):
         )
         self.cubeA = BoxObject(
             name="cubeA",
-            size_min=[0.02, 0.02, 0.02],
-            size_max=[0.02, 0.02, 0.02],
+            size_min=[0.015, 0.015, 0.015],
+            size_max=[0.025, 0.025, 0.025],
             rgba=[1, 0, 0, 1],
             material=redwood,
         )
@@ -360,8 +360,8 @@ class UltraTask(ManipulationEnv):
 
         self.cubeC = BoxObject(
             name="cubeC",
-            size_min=[0.025, 0.025, 0.025],
-            size_max=[0.025, 0.025, 0.025],
+            size_min=[0.02, 0.02, 0.02],
+            size_max=[0.03, 0.03, 0.03],
             rgba=[0, 0, 1, 1],
             material=bluewood,
         )

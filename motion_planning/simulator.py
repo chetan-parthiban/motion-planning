@@ -3,6 +3,7 @@ import numpy as np
 import robosuite as suite
 from typing import Any
 from robosuite.utils.mjcf_utils import xml_path_completion
+from robosuite.utils.camera_utils import get_real_depth_map
 import math
 
 IMAGE_HEIGHT = 256
@@ -29,7 +30,7 @@ class Simulator:
         observation["robot0_eef_quat"] = obs["robot0_eef_quat"]
         observation["robot0_gripper_qpos"] = obs["robot0_gripper_qpos"]
         observation["frontview_image"] = obs["frontview_image"]
-        observation["frontview_depth"] = obs["frontview_depth"]
+        observation["frontview_depth"] = get_real_depth_map(self.env.sim, obs["frontview_depth"])
         return observation
 
     def render(self) -> None:
